@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
     selector: 'app-stat',
@@ -10,10 +10,15 @@ export class StatComponent implements OnInit {
     @Input() icon: string;
     @Input() count: number;
     @Input() label: string;
-    @Input() data: number;
+    @Input() orderstatus: string;
     @Output() event: EventEmitter<any> = new EventEmitter();
 
-    constructor() {}
+    constructor() {
+        if (this.bgClass) {
+            this.bgClass = 'blue';
+        }
+    }
 
-    ngOnInit() {}
+    ngOnInit() {
+    }
 }

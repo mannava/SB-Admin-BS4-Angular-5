@@ -1,5 +1,5 @@
 <div [@routerTransition]>
-    <h2 class="text-muted">Dashboard <small>Statistics Overview</small></h2>
+    <!--<h2 class="text-muted">Dashboard <small>Statistics Overview</small></h2>
     <div class="row">
         <div class="col-md-12">
             <ngb-carousel>
@@ -13,22 +13,28 @@
             </ngb-carousel>
         </div>
     </div>
-    <hr>
+    <hr>-->
     <div class="row">
-        <div class="col-xl-3 col-lg-6">
-            <app-stat [bgClass]="'primary'" [icon]="'fa-comments'" [count]="26" [label]="'New Comments!'" ></app-stat>
+        <div class="col-xl-2 col-lg-6">
+            <app-stat [bgClass]="'primary'" [icon]="'fas fa-cart-plus'" [count]="'60 Deliveries'" [label]="'50 Orders'"  orderstatus="ConnectOrders"></app-stat>
         </div>
-        <div class="col-xl-3 col-lg-6">
-            <app-stat [bgClass]="'warning'" [icon]="'fa-tasks'" [count]="12" [label]="'New task!'" ></app-stat>
+        <div class="col-xl-2 col-lg-6">
+            <app-stat [bgClass]="'warning'" [icon]="'fas fa-columns'" [count]="12" [label]="'5 Orders'" orderstatus="EDI"></app-stat>
         </div>
-        <div class="col-xl-3 col-lg-6">
-            <app-stat [bgClass]="'success'" [icon]="'fa-shopping-cart'" [count]="124" [label]="'New Orders!'" ></app-stat>
+        <div class="col-xl-2 col-lg-6">
+            <app-stat [bgClass]="'success'" [icon]="'fas fa-sitemap'" [count]="124" [label]="'55 Orders'"  orderstatus="Ent Integration"></app-stat>
         </div>
-        <div class="col-xl-3 col-lg-6">
-            <app-stat [bgClass]="'danger'" [icon]="'fa-support'" [count]="13" [label]="'New Tickets!'"></app-stat>
+        <div class="col-xl-2 col-lg-6">
+            <app-stat [bgClass]="'danger'" [icon]="'fas fa-laptop'" [count]="'60 Deliveries'" [label]="'50 Orders'"  orderstatus="ConnectOrders"></app-stat>
+        </div>
+        <div class="col-xl-2 col-lg-6">
+            <app-stat [bgClass]="'info'" [icon]="'fas fa-truck'" [count]="13" [label]="'Orders!'"  orderstatus="ACUMAX"></app-stat>
+        </div>
+        <div class="col-xl-2 col-lg-6">
+            <app-stat [bgClass]="'primary'" [icon]="'fas fa-server'" [count]="13" [label]="'Orders!'"  orderstatus="StatusReport"></app-stat>
         </div>
     </div>
-    <hr />
+    <!--<hr />
     <ngb-alert [type]="alert.type" (close)="closeAlert(alert)" *ngFor="let alert of alerts">{{ alert.message }}</ngb-alert>
     <hr />
     <div class="row">
@@ -37,27 +43,27 @@
                 <div class="card-header">
                     <i class="fa fa-clock-o fa-fw"></i> Responsive Timeline
                 </div>
-                <!-- /.card-header -->
+                &lt;!&ndash; /.card-header &ndash;&gt;
                 <app-timeline></app-timeline>
-                <!-- /.card-body -->
+                &lt;!&ndash; /.card-body &ndash;&gt;
             </div>
-            <!-- /.card -->
+            &lt;!&ndash; /.card &ndash;&gt;
         </div>
-        <!-- /.col-lg-8 -->
+        &lt;!&ndash; /.col-lg-8 &ndash;&gt;
         <div class="col-lg-4">
             <div class="card card-default mb-3">
                 <div class="card-header">
                     <i class="fa fa-bell fa-fw"></i> Notifications card
                 </div>
-                <!-- /.card-header -->
+                &lt;!&ndash; /.card-header &ndash;&gt;
                 <app-notification></app-notification>
-                <!-- /.card-body -->
+                &lt;!&ndash; /.card-body &ndash;&gt;
             </div>
-            <!-- /.card -->
+            &lt;!&ndash; /.card &ndash;&gt;
 
             <app-chat></app-chat>
-            <!-- /.card .chat-card -->
+            &lt;!&ndash; /.card .chat-card &ndash;&gt;
         </div>
-        <!-- /.col-lg-4 -->
-    </div>
+        &lt;!&ndash; /.col-lg-4 &ndash;&gt;
+    </div>-->
 </div>
