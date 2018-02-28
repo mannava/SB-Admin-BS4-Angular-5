@@ -57,17 +57,13 @@ export class DashboardComponent implements OnInit {
 
     public rows: Array<any> = [];
     public columns: Array<any> = [
-        {title: 'Name', name: 'name', filtering: {filterString: '', placeholder: 'Filter by name'}},
-        {
-            title: 'Position',
-            name: 'position',
-            sort: false,
-            filtering: {filterString: '', placeholder: 'Filter by position'}
-        },
-        {title: 'Office', className: ['office-header', 'text-success'], name: 'office', sort: 'asc'},
-        {title: 'Extn.', name: 'ext', sort: '', filtering: {filterString: '', placeholder: 'Filter by extn.'}},
-        {title: 'Start date', className: 'text-warning', name: 'startDate'},
-        {title: 'Salary ($)', name: 'salary'}
+        {title: 'EI_TRXN_TYPE', name: 'EI_TRXN_TYPE', filtering: {filterString: ''}},
+        {title: 'EI_TIMESTAMP', name: 'EI_TIMESTAMP', filtering: {filterString: ''}},
+        {title: 'TRXN_ID', name: 'TRXN_ID', filtering: {filterString: ''}},
+        {title: 'ORD_ID', name: 'ORD_ID', filtering: {filterString: ''}},
+        {title: 'SALESDOCNUM', name: 'SALESDOCNUM', filtering: {filterString: ''}},
+        {title: 'DELIVERYDOCNUM', name: 'DELIVERYDOCNUM'},
+        {title: 'DCNUMBER', name: 'DCNUMBER'}
     ];
     public page: any = 1;
     public itemsPerPage: any = 10;
