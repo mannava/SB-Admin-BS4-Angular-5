@@ -5,8 +5,7 @@ import { PaginationModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import {
-    Ng2TableModule, NgTableComponent, NgTableFilteringDirective, NgTablePagingDirective,
-    NgTableSortingDirective
+    Ng2TableModule
 } from 'ng2-table/ng2-table';
 import {
     TimelineComponent,
@@ -14,7 +13,6 @@ import {
     ChatComponent
 } from './components';
 import { StatModule } from '../../shared';
-import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule} from "@angular/forms";
 import {TabsModule} from "ng2-bootstrap";
 
@@ -26,7 +24,7 @@ import {TabsModule} from "ng2-bootstrap";
         DashboardRoutingModule,
         StatModule,
         Ng2TableModule,
-        PaginationModule,
+        PaginationModule.forRoot(),
         FormsModule,
         PaginationModule,
         TabsModule

@@ -16,27 +16,32 @@
     <hr>-->
     <div class="row">
         <div class="col-xl-2 col-lg-6">
-            <app-stat [bgClass]="'primary'" [icon]="'fas fa-cart-plus'" [count]="'60 Deliveries'" [label]="'50 Orders'"  orderstatus="ConnectOrders"></app-stat>
+            <app-stat [bgClass]="'primary'" [icon]="'fas fa-cart-plus'" [count]="'60 Deliveries'" [label]="'50 Orders'"
+                      orderstatus="ConnectOrders"></app-stat>
         </div>
         <div class="col-xl-2 col-lg-6">
-            <app-stat [bgClass]="'warning'" [icon]="'fas fa-columns'" [count]="12" [label]="'5 Orders'" orderstatus="EDI"></app-stat>
+            <app-stat [bgClass]="'warning'" [icon]="'fas fa-columns'" [count]="12" [label]="'5 Orders'"
+                      orderstatus="EDI"></app-stat>
         </div>
         <div class="col-xl-2 col-lg-6">
-            <app-stat [bgClass]="'success'" [icon]="'fas fa-sitemap'" [count]="124" [label]="'55 Orders'"  orderstatus="Ent Integration"></app-stat>
+            <app-stat [bgClass]="'success'" [icon]="'fas fa-sitemap'" [count]="124" [label]="'55 Orders'"
+                      orderstatus="Ent Integration"></app-stat>
         </div>
         <div class="col-xl-2 col-lg-6">
-            <app-stat [bgClass]="'danger'" [icon]="'fas fa-random'" [count]="'60 Deliveries'" [label]="'50 Orders'"  orderstatus="ConnectOrders"></app-stat>
+            <app-stat [bgClass]="'danger'" [icon]="'fas fa-random'" [count]="'60 Deliveries'" [label]="'50 Orders'"
+                      orderstatus="ConnectOrders"></app-stat>
         </div>
         <div class="col-xl-2 col-lg-6">
-            <app-stat [bgClass]="'info'" [icon]="'fas fa-truck'" [count]="13" [label]="'Orders!'"  orderstatus="ACUMAX"></app-stat>
+            <app-stat [bgClass]="'info'" [icon]="'fas fa-truck'" [count]="13" [label]="'Orders!'"
+                      orderstatus="ACUMAX"></app-stat>
         </div>
         <div class="col-xl-2 col-lg-6">
-            <app-stat [bgClass]="'primary'" [icon]="'fas fa-server'" [count]="13" [label]="'Orders!'"  orderstatus="StatusReport"></app-stat>
+            <app-stat [bgClass]="'primary'" [icon]="'fas fa-server'" [count]="13" [label]="'Orders!'"
+                      orderstatus="StatusReport"></app-stat>
         </div>
     </div>
 
-
-    <hr />
+    <br><br>
     <!--<div class="row">
         <div class="col-md-4">
             <input *ngIf="config.filtering" placeholder="Filter all columns"
@@ -51,18 +56,24 @@
               (cellClicked)="onCellClick($event)"
               [rows]="rows" [columns]="columns">
     </ng-table>
-    <!--<pagination *ngIf="config.paging"
-                class="pagination-sm"
-                [(ngModel)]="page"
-                [totalItems]="length"
-                [itemsPerPage]="itemsPerPage"
-                [maxSize]="maxSize"
-                [boundaryLinks]="true"
-                [rotate]="false"
-                (pageChanged)="onChangeTable(config, $event)"
-                (numPages)="numPages = $event">
-    </pagination>
-    <pre *ngIf="config.paging" class="card card-block card-header">Page: {{page}} / {{numPages}}</pre>-->
+    <div class="row">
+        <div class="col-xl-10">
+            <pagination *ngIf="config.paging"
+                        class="pagination-sm"
+                        [(ngModel)]="page"
+                        [totalItems]="length"
+                        [itemsPerPage]="itemsPerPage"
+                        [maxSize]="maxSize"
+                        [boundaryLinks]="true"
+                        [rotate]="false"
+                        (pageChanged)="onChangeTable(config, $event)"
+                        (numPages)="numPages = $event">
+            </pagination>
+        </div>
+        <div class="col-xl-2">
+            <div *ngIf="config.paging">Page: {{page}} / {{numPages}}</div>
+        </div>
+    </div>
     <!--<ngb-alert [type]="alert.type" (close)="closeAlert(alert)" *ngFor="let alert of alerts">{{ alert.message }}</ngb-alert>
     <hr />
     <div class="row">
