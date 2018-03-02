@@ -56,7 +56,7 @@ export class DashboardComponent implements OnInit {
 
     public rows: Array<any> = [];
     public columns: Array<any> = [
-        {title: 'EI_TRXN_TYPE', name: 'EI_TRXN_TYPE', filtering: {filterString: ''}, width: '5%'},
+        {title: 'EI_TRXN_TYPE', name: 'EI_TRXN_TYPE', filtering: {filterString: ''}},
         {title: 'EI_TIMESTAMP', name: 'EI_TIMESTAMP', filtering: {filterString: ''}},
         {title: 'TRXN_ID', name: 'TRXN_ID', filtering: {filterString: ''}},
         {title: 'ORD_ID', name: 'ORD_ID', filtering: {filterString: ''}},
