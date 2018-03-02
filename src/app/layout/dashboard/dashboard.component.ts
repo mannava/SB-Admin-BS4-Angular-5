@@ -61,8 +61,8 @@ export class DashboardComponent implements OnInit {
         {title: 'TRXN_ID', name: 'TRXN_ID', filtering: {filterString: ''}},
         {title: 'ORD_ID', name: 'ORD_ID', filtering: {filterString: ''}},
         {title: 'SALESDOCNUM', name: 'SALESDOCNUM', filtering: {filterString: ''}},
-        {title: 'DELIVERYDOCNUM', name: 'DELIVERYDOCNUM'},
-        {title: 'DCNUMBER', name: 'DCNUMBER'}
+        {title: 'DELIVERYDOCNUM', name: 'DELIVERYDOCNUM', filtering: {filterString: ''}},
+        {title: 'DCNUMBER', name: 'DCNUMBER', filtering: {filterString: ''}}
     ];
     public page: any = 1;
     public itemsPerPage: any = 10;

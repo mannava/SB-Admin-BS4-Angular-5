@@ -27,13 +27,13 @@ export class TablesComponent implements OnInit {
 */
     config: QueryBuilderConfig = {
         fields: {
-            EI_TRXN_TYPE: {name: 'EI_TRXN_TYPE', type: 'number'},
-            EI_TIMESTAMP: {name: 'EI_TIMESTAMP', type: 'number'},
-            TRXN_ID: {name: 'TRXN_ID', type: 'number'},
-            ORD_ID: {name: 'ORD_ID', type: 'number'},
-            SALESDOCNUM: {name: 'SALESDOCNUM', type: 'number'},
-            DELIVERYDOCNUM: {name: 'DELIVERYDOCNUM', type: 'number'},
-            DCNUMBER: {name: 'DCNUMBER', type: 'number'}
+            EI_TRXN_TYPE: {name: 'EI_TRXN_TYPE', type: 'string', operators: ['=', '!=', '<', '>', '<=', '>=']},
+            EI_TIMESTAMP: {name: 'EI_TIMESTAMP', type: 'string', operators: ['=', '!=', '<', '>', '<=', '>=']},
+            TRXN_ID: {name: 'TRXN_ID', type: 'string', operators: ['=', '!=', '<', '>', '<=', '>=']},
+            ORD_ID: {name: 'ORD_ID', type: 'string', operators: ['=', '!=', '<', '>', '<=', '>=']},
+            SALESDOCNUM: {name: 'SALESDOCNUM', type: 'string', operators: ['=', '!=', '<', '>', '<=', '>=']},
+            DELIVERYDOCNUM: {name: 'DELIVERYDOCNUM', type: 'string', operators: ['=', '!=', '<', '>', '<=', '>=']},
+            DCNUMBER: {name: 'DCNUMBER', type: 'string', operators: ['=', '!=', '<', '>', '<=', '>=']}
         }
     };
 
