@@ -1,4 +1,135 @@
 <div [@routerTransition]>
     <app-page-header [heading]="'Customized Search'" [icon]="'fa fa-fw fa-search'"></app-page-header>
-    <query-builder [(ngModel)]='query' [config]='config' [classNames]='classNames'></query-builder>
+    <query-builder [(ngModel)]='query' [config]='config' [classNames]='classNames'>
+        <ng-container *queryInput="let rule; type: 'date'">
+            <!--<input [(ngModel)]="date5" ng2-datetime-picker `year="2014" month="12" day="31" hour="23" minute="59" />-->
+        </ng-container>
+    </query-builder>
+</div>
+<br>
+<div class="pull-right">
+    <button type="button" class="btn btn-success" (click)="executeQuery()">
+        <span class="fa fa-fw fa-search"></span> Execute Query
+    </button>
+</div>
+
+<br><br>
+
+<input
+    [(ngModel)]="date"
+    ng2-datetime-picker
+    date-format="MM/DD/YYYY HH:mm"
+    parse-format="YYYY-MM-DD HH:mm:ss" />
+
+
+<div class="col-md-12">
+    <table class="table table-striped table-condensed table-responsive" [hidden]="showTable">
+        <thead>
+        <tr>
+            <th scope="col">EDI/Connect</th>
+            <th scope="col">EAI</th>
+            <th scope="col">SAP</th>
+            <th scope="col">EAI</th>
+            <th scope="col">ACUMAX</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>000000008226CONNORDR</td>
+            <td>22743016</td>
+            <td>1094903603</td>
+            <td>600007899</td>
+            <td>D147</td>
+        </tr>
+        <tr>
+            <td>000000008227CONNORDR</td>
+            <td>22743127</td>
+            <td>1094903604</td>
+            <td>600007902</td>
+            <td>D148</td>
+        </tr>
+        <tr>
+            <td>000000008228CONNORDR</td>
+            <td>22743893</td>
+            <td>1094903605</td>
+            <td>600007901</td>
+            <td>D149</td>
+        </tr>
+
+        <tr>
+            <td>000000008229CONNORDR</td>
+            <td>22743007</td>
+            <td>1094903609</td>
+            <td>600007904</td>
+            <td>D150</td>
+        </tr>
+        <tr>
+            <td>000000008228CONNORDR</td>
+            <td>22743023</td>
+            <td>1094903605</td>
+            <td>600007921</td>
+            <td>D151</td>
+        </tr>
+
+        <tr>
+            <td>000000008230CONNORDR</td>
+            <td>22743017</td>
+            <td>1094903603</td>
+            <td>600007199</td>
+            <td>D152</td>
+        </tr>
+
+        <tr>
+            <td>000000008231CONNORDR</td>
+            <td>22743017</td>
+            <td>1094903603</td>
+            <td>600007899</td>
+            <td>D153</td>
+        </tr>
+        <tr>
+            <td>000000008232CONNORDR</td>
+            <td>22743007</td>
+            <td>1094903611</td>
+            <td>600007202</td>
+            <td>D154</td>
+        </tr>
+        <tr>
+            <td>000000008233CONNORDR</td>
+            <td>22743003</td>
+            <td>1094903605</td>
+            <td>600001921</td>
+            <td>D155</td>
+        </tr>
+
+        <tr>
+            <td>000000008234CONNORDR</td>
+            <td>22743007</td>
+            <td>1094903612</td>
+            <td>600007902</td>
+            <td>D148</td>
+        </tr>
+        <tr>
+            <td>000000008235CONNORDR</td>
+            <td>22743543</td>
+            <td>1094943605</td>
+            <td>600007801</td>
+            <td>D156</td>
+        </tr>
+
+        <tr>
+            <td>000000008236CONNORDR</td>
+            <td>22743000</td>
+            <td>1094903208</td>
+            <td>600007902</td>
+            <td>D157</td>
+        </tr>
+        <tr>
+            <td>000000008237CONNORDR</td>
+            <td>22743001</td>
+            <td>1094903609</td>
+            <td>600007902</td>
+            <td>D159</td>
+        </tr>
+        </tbody>
+    </table>
 </div>

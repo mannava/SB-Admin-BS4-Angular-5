@@ -9,11 +9,21 @@ import {QueryBuilderConfig} from 'angular2-query-builder';
     animations: [routerTransition()]
 })
 export class TablesComponent implements OnInit {
+    public showTable: boolean = true;
+
+    date: Date = new Date();
+    settings = {
+        bigBanner: true,
+        timePicker: false,
+        format: 'dd-MM-yyyy',
+        defaultOpen: true
+    };
+
     query = {
         condition: 'and',
         rules: [
             {field: 'EI_TRXN_TYPE', operator: '=', value: ''},
-            {field: 'EI_TIMESTAMP', operator: '=', value: ''},
+            {field: 'EI_TIMESTAMP', operator: '=', value: this.date},
             {field: 'TRXN_ID', operator: '=', value: ''},
             {field: 'ORD_ID', operator: '=', value: ''},
             {field: 'SALESDOCNUM', operator: '=', value: ''},
@@ -58,5 +68,9 @@ export class TablesComponent implements OnInit {
     }
 
     ngOnInit() {
+    }
+
+    executeQuery() {
+        this.showTable = !this.showTable;
     }
 }
