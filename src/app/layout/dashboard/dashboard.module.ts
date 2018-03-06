@@ -13,8 +13,9 @@ import {
     ChatComponent
 } from './components';
 import { StatModule } from '../../shared';
-import {FormsModule} from "@angular/forms";
-import {TabsModule} from "ng2-bootstrap";
+import {FormsModule} from '@angular/forms';
+import {TabsModule} from 'ng2-bootstrap';
+import {InputTextModule} from 'primeng/primeng';
 
 @NgModule({
     imports: [
